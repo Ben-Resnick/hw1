@@ -237,4 +237,23 @@ ON
 
 
 -- The SQL statement for the cast output
--- TODO!
+
+SELECT
+    movie.title,
+    actor.name,
+    character.character_name
+FROM
+    character
+INNER JOIN
+    movie
+ON
+    character.movie_id = movie.id
+INNER JOIN
+    actor
+ON
+    character.actor_id = actor.id
+ORDER BY
+    movie.title,
+    actor.name;
+
+
